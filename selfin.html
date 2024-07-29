@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<form action="signup.html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介紹</title>
+
+    <style>
+    
+        .titleself{
+            text-align: center;
+        }
+        .semplearea{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 800px;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid#cbc6c6;
+            box-shadow: 10px 5px 10px rgb(111,15,10,0.5);
+            border-radius: 20px;
+        }
+        .imgself{
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+        .passarea{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 800px;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid#cbc6c6;
+            box-shadow: 10px 5px 10px rgb(111,15,10,0.5);
+            border-radius: 20px;
+        }
+        .pressopen{
+            background-color: rgb(240, 201, 247);
+            border: 2px solid#cbc6c6;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: auto;
+        }
+        
+        .active, .pressopen:hover{
+            background-color: rgb(194, 97, 255);
+
+        }
+        .detail{
+            padding:0 20px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        .productarea{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 800px;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid#cbc6c6;
+            box-shadow: 10px 5px 10px rgb(111,15,10,0.5);
+            border-radius: 20px;
+        }
+        .productNo{
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 800px;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid#cbc6c6;
+            box-shadow: 2px 5px 10px rgb(111,15,10,0.5);
+            border-radius: 10px;
+        }
+        .pj1{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+    </style>
+</head>
+  <body>
+    <h2 class ="titleself"><strong>自我介紹</strong></h2>
+    <div class = "semplearea">
+        <div class = "selfwordarea">
+            <img class = "imgself" src="https://www.ijwhite.com/wp-content/uploads/2017/05/placeholder-800x400.jpeg">
+            <h3>關於我</h3>
+            <p>自我介紹</p>
+        </div>
+    </div>
+    <div class ="passarea">
+        <button type="button" class ="pressopen"><h2>經歷</h2></button>
+        <div class = "detail">
+            <p >學歷 :</p>
+            <p >1. .....</p>
+            <p >2. .....</p>
+            <p >工作經歷 :</p>
+            <p >1. .....</p>
+            <p >2. .....</p>
+            <p >3. .....</p>
+            <p >4. .....</p>
+        </div>
+    </div>
+    
+    <div  class ="passarea">
+        <button type="button" class ="pressopen"><h2>技能</h2></button>
+        <div class = "detail">
+            <p >技能 :</p>
+            <p >1. .....</p>
+            <p >2. .....</p>
+            <p >3. .....</p>
+            <p >4. .....</p>
+        </div>
+    </div>
+    <div  class ="passarea">
+        <button type="button" class ="pressopen"><h2>興趣愛好</h2></button></h2>
+        <div class = "detail">
+            <p >平時休閒時.....</p>
+        </div>
+    </div>
+    <div class = "productarea">
+        <h3>我的作品</h3>
+        <div class="productNo">
+            <img src="https://via.placeholder.com/100" >
+            <button type="submit" class="pj1">作品一</button>
+        </div>
+    </div>
+
+    <form>
+    </form>
+
+    
+
+    <script>
+        /* class= prassopen */
+        var pasopen = document.getElementsByClassName("pressopen");
+        var i;
+        for(i = 0;i<pasopen.length;i++){
+            pasopen[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var detail = this.nextElementSibling;//this.parentNode.querySelector(".detail");
+                if(detail.style.display === "block"){
+                    detail.style.display = "none";
+                }else{
+                    detail.style.display ="block";
+                }
+            });
+        }
+        /**/
+    </script>
+    
+  </body>
+  </form>
+</html>
